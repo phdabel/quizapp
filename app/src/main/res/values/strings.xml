@@ -1,3 +1,48 @@
 <resources>
     <string name="app_name">Video Game Quiz</string>
+
+    <string name="question_1">1. Nintendo was founded in Kyoto, Japan in 1889 as:</string>
+    <string name="q1_alt_a">a video game company</string>
+    <string name="q1_alt_b">a manufacturer of hanafuda playing cards</string>
+    <string name="q1_alt_c">a board games company</string>
+    <string name="q1_alt_d">a comic book store</string>
+    <string name="q1_answer">Nintendo was a manufacturer of hanafuda playing cards, a deck of cards typically japanese, just later it became a video game company.</string>
+
+    <string name="question_2">2. One of the most classic videogames was created by Shigeru Miamoto based on the then-popular Popeye character. The arcade had three main characters which were:</string>
+    <string name="q2_alt_a">Mario</string>
+    <string name="q2_alt_b">Pauline</string>
+    <string name="q2_alt_c">Donkey Kong</string>
+    <string name="q2_alt_d">Jumpman</string>
+    <string name="q2_answer">Donkey Kong, a gorilla, is Jumpman\'s pet. Jumpman mistreats Donkey Kong, who snaps and kidnaps Pauline and takes her up to a building under construction. Jumpman must climb to the top to save her. Later Jumpman was renamed to Mario and became the mascot of Nintendo.</string>
+
+    <string name="question_3">3. The Legend of Zelda franchise was released by Nintendo for the Nintendo Entertainment System (NES), and it was a revolutionary game, not only with a new save system, but also with a gameplay structured within a large open world, with no explicit path to follow. Which of them are not a videogame of this franchise?</string>
+    <string name="q3_alt_a">Legend of Zelda: A link to the past</string>
+    <string name="q3_alt_b">Legend of Zelda: The triforce awakens</string>
+    <string name="q3_alt_c">Legend of Zelda: Ocarina of Time</string>
+    <string name="q3_alt_d">Legend of Zelda: Breath of the Wild</string>
+    <string name="q3_answer">Obviously, Legend of Zelda: The triforce awakens never existed as an official Nintendo videogame. It\'s just a play on words with a movie of the Star Wars franchise. Also you can find a serie of fun videos parodying the Star Wars movie and the Legend of Zelda.</string>
+
+    <string name="question_4">4. Mario is one of the most famous videogame franchises. Mario appeared in 1981 in the Donkey Kong arcade with the name Jumpman. Later it appeared in its own game called Mario Brothers, featuring Mario and his brother Luigi. In what year was released the videogame Super Mario Bros?</string>
+    <string name="q4_alt_a">1981</string>
+    <string name="q4_alt_b">1983</string>
+    <string name="q4_alt_c">1984</string>
+    <string name="q4_alt_d">1985</string>
+    <string name="q4_answer">This question is tricky, the Mario Brothers was released in 1983, but Super Mario Bros was released in 1985.</string>
+
+    <string name="question_5">5. It was originally planned as a game based on Jean-Claude Van Damme, but after the creators decided to make a game based loosely on Enter the Dragon. This idea morphed into a fighting game that starred digitally captured martial artists in its firts three installments. Which game are we talking about?</string>
+    <string name="q5_alt_a">Killer Instinct</string>
+    <string name="q5_alt_b">Mortal Kombat</string>
+    <string name="q5_alt_c">Street Fighter</string>
+    <string name="q5_alt_d">Final Fight</string>
+    <string name="q5_answer">The correct answer is Mortal Kombat, a game created by Ed Boon and John Tobias. The series also delivered an unprecedent level of violence, and introduced finishing moves called fatalities that let the winner of a match kill his opponent in a graphic and often comical fashion.</string>
+
+    <string name="question_6">6. Mortal Kombat has a rich story with many characters and scenarios. Each character has its own background, special powers and they belong to some realm or clan. Which of these characters belong to the Lin-Kuei clan?</string>
+    <string name="q6_alt_a">Sub-Zero</string>
+    <string name="q6_alt_b">Scorpion</string>
+    <string name="q6_alt_c">Cyrax</string>
+    <string name="q6_alt_d">Smoke</string>
+    <string name="q6_answer">Sub-Zero, Cyrax, Smoke and also Sektor belongs to the Lin-Kuei clan. When the Lin-Kuei decided to convert their best warriors into cyborgs, Sektor and Cyrax had already been converted. Smoke and Sub-Zero attempt to espace, but Smoke was captured and coverted to cyborg LK-7T2.</string>
+
+    <string name="question_7">7. Thank you for using this videogame quiz app. We hope that you have fun at the same time you learn more things about the history of videogames. This app is a beta and we would like to know what videogame, platform, company, franchise or character do you like to see in the questions.</string>
+
 </resources>

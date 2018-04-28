@@ -5,7 +5,29 @@
         <!-- Customize your theme here. -->
         <item name="colorPrimary">@color/colorPrimary</item>
         <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
-        <item name="colorAccent">@color/colorAccent</item>
+        <item name="colorAccent">@color/colorPrimaryLight</item>
+    </style>
+
+    <!-- Style of the QuestionBlock -->
+    <style name="QuestionBlock">
+        <item name="android:layout_margin">20dp</item>
+        <item name="android:orientation">vertical</item>
+        <item name="android:background">@color/colorSecondary</item>
+    </style>
+
+    <!-- Style of the TextView in the header of the QuestionBlock -->
+    <style name="QuestionDescription">
+        <item name="android:layout_marginRight">10dp</item>
+        <item name="android:layout_gravity">center</item>
+        <item name="android:textColor">@color/textColorSecondary</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:textSize">20sp</item>
+    </style>
+
+    <!-- Style of the alternatives -->
+    <style name="QuestionAlternatives">
+        <item name="android:textColor">@color/textColorSecondary</item>
+        <item name="android:textSize">15sp</item>
     </style>
 
 </resources>
