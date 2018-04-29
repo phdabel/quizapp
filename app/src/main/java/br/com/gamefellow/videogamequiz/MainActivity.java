@@ -336,7 +336,7 @@ public class MainActivity extends AppCompatActivity {
     private double computeCheckBoxScore(boolean[] answer, boolean[] correctAnswer){
         double questionScore = 0.0;
         for(int i = 0; i < answer.length; i++){
-            if(answer[i] == correctAnswer[i]) questionScore += 0.25; else questionScore -= 0.25;
+            if(answer[i] == correctAnswer[i]) questionScore += 0.25;
         }
         return questionScore;
     }
