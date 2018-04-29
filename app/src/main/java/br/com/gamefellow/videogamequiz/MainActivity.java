@@ -80,7 +80,7 @@ public class MainActivity extends AppCompatActivity {
     /**
      * Binds the optional question 7 and the submit button
      */
-    @BindView(R.id.q7_answer) EditText q7;
+    @BindView(R.id.q7_answer) EditText question7;
     @BindView(R.id.submitButton) Button submit;
 
     /**
@@ -236,7 +236,11 @@ public class MainActivity extends AppCompatActivity {
             seeCorrectAnswers.setText(R.string.viewAnswersMessage);
             gbLogo.setBackgroundResource(R.drawable.giantbomblogo);
             submit.setVisibility(View.INVISIBLE);
-            if(q7.length() != 0) sendEMail();
+            if(question7.length() != 0) sendEMail();
+            Toast.makeText(this,
+                    String.format(getString(R.string.finalScoreMessage).toString(), computeScore(), TOTAL_SCORE),
+                    Toast.LENGTH_LONG)
+                    .show();
         }
     }
 
@@ -286,7 +290,7 @@ public class MainActivity extends AppCompatActivity {
         sendTo[0] = "email@email.com";
         intent.putExtra(Intent.EXTRA_EMAIL, sendTo);
         intent.putExtra(Intent.EXTRA_SUBJECT, "Next Quiz");
-        intent.putExtra(Intent.EXTRA_TEXT, q7.getText());
+        intent.putExtra(Intent.EXTRA_TEXT, question7.getText());
         startActivity(Intent.createChooser(intent,"Send questions for next quiz"));
 
     }
@@ -295,22 +299,22 @@ public class MainActivity extends AppCompatActivity {
      *  Method to provide the feedback of the questions
      */
     private void provideFeedback(){
-        answers[0].setText(R.string.q1_answer);
-        radioButtons1[1].setBackgroundResource(R.color.colorPrimary);
-        answers[1].setText(R.string.q2_answer);
-        checkBoxes2[1].setBackgroundResource(R.color.colorPrimary);
-        checkBoxes2[2].setBackgroundResource(R.color.colorPrimary);
-        checkBoxes2[3].setBackgroundResource(R.color.colorPrimary);
-        answers[2].setText(R.string.q3_answer);
-        checkBoxes3[1].setBackgroundResource(R.color.colorPrimary);
-        answers[3].setText(R.string.q4_answer);
-        radioButtons4[3].setBackgroundResource(R.color.colorPrimary);
-        answers[4].setText(R.string.q5_answer);
-        radioButtons5[1].setBackgroundResource(R.color.colorPrimary);
         answers[5].setText(R.string.q6_answer);
         checkBoxes6[0].setBackgroundResource(R.color.colorPrimary);
         checkBoxes6[2].setBackgroundResource(R.color.colorPrimary);
         checkBoxes6[3].setBackgroundResource(R.color.colorPrimary);
+        answers[4].setText(R.string.q5_answer);
+        radioButtons5[1].setBackgroundResource(R.color.colorPrimary);
+        answers[3].setText(R.string.q4_answer);
+        radioButtons4[3].setBackgroundResource(R.color.colorPrimary);
+        answers[2].setText(R.string.q3_answer);
+        checkBoxes3[1].setBackgroundResource(R.color.colorPrimary);
+        answers[1].setText(R.string.q2_answer);
+        checkBoxes2[1].setBackgroundResource(R.color.colorPrimary);
+        checkBoxes2[2].setBackgroundResource(R.color.colorPrimary);
+        checkBoxes2[3].setBackgroundResource(R.color.colorPrimary);
+        answers[0].setText(R.string.q1_answer);
+        radioButtons1[1].setBackgroundResource(R.color.colorPrimary);
     }
 
     /**
