@@ -1,7 +1,7 @@
 <resources>
     <string name="app_name">Video Game Quiz</string>
 
-    <string name="question_1">1. Nintendo was founded in Kyoto, Japan in 1889 as:</string>
+    <string name="question_1">*1. Nintendo was founded in Kyoto, Japan in 1889 as:</string>
     <string name="q1_alt_a">a video game company</string>
     <string name="q1_alt_b">a manufacturer of hanafuda playing cards</string>
     <string name="q1_alt_c">a board games company</string>
@@ -22,14 +22,14 @@
     <string name="q3_alt_d">Legend of Zelda: Breath of the Wild</string>
     <string name="q3_answer">Obviously, Legend of Zelda: The triforce awakens never existed as an official Nintendo videogame. It\'s just a play on words with a movie of the Star Wars franchise. Also you can find a serie of fun videos parodying the Star Wars movie and the Legend of Zelda.</string>
 
-    <string name="question_4">4. Mario is one of the most famous videogame franchises. Mario appeared in 1981 in the Donkey Kong arcade with the name Jumpman. Later it appeared in its own game called Mario Brothers, featuring Mario and his brother Luigi. In what year was released the videogame Super Mario Bros?</string>
+    <string name="question_4">*4. Mario is one of the most famous videogame franchises. Mario appeared in 1981 in the Donkey Kong arcade with the name Jumpman. Later it appeared in its own game called Mario Brothers, featuring Mario and his brother Luigi. In what year was released the videogame Super Mario Bros?</string>
     <string name="q4_alt_a">1981</string>
     <string name="q4_alt_b">1983</string>
     <string name="q4_alt_c">1984</string>
     <string name="q4_alt_d">1985</string>
     <string name="q4_answer">This question is tricky, the Mario Brothers was released in 1983, but Super Mario Bros was released in 1985.</string>
 
-    <string name="question_5">5. It was originally planned as a game based on Jean-Claude Van Damme, but after the creators decided to make a game based loosely on Enter the Dragon. This idea morphed into a fighting game that starred digitally captured martial artists in its firts three installments. Which game are we talking about?</string>
+    <string name="question_5">*5. It was originally planned as a game based on Jean-Claude Van Damme, but after the creators decided to make a game based loosely on Enter the Dragon. This idea morphed into a fighting game that starred digitally captured martial artists in its firts three installments. Which game are we talking about?</string>
     <string name="q5_alt_a">Killer Instinct</string>
     <string name="q5_alt_b">Mortal Kombat</string>
     <string name="q5_alt_c">Street Fighter</string>
@@ -44,5 +44,12 @@
     <string name="q6_answer">Sub-Zero, Cyrax, Smoke and also Sektor belongs to the Lin-Kuei clan. When the Lin-Kuei decided to convert their best warriors into cyborgs, Sektor and Cyrax had already been converted. Smoke and Sub-Zero attempt to espace, but Smoke was captured and coverted to cyborg LK-7T2.</string>
 
     <string name="question_7">7. Thank you for using this videogame quiz app. We hope that you have fun at the same time you learn more things about the history of videogames. This app is a beta and we would like to know what videogame, platform, company, franchise or character do you like to see in the questions.</string>
+
+    <string name="submitButton">Submit</string>
+
+    <string name="validationMessage">Questions flagged with \'*\' are required.</string>
+    <string name="validationForm">You must answer the required questions before finalizing the quiz.</string>
+    <string name="finalScoreMessage">Your score is: %1$.2f / %2$.2f</string>
+    <string name="viewAnswersMessage">Scroll up to view the correct answers. If you want to know more about videogames, visit GiantBomb and answer the questions again.</string>
 
 </resources>
