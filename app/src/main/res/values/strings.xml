@@ -43,7 +43,10 @@
     <string name="q6_alt_d">Smoke</string>
     <string name="q6_answer">Sub-Zero, Cyrax, Smoke and also Sektor belongs to the Lin-Kuei clan. When the Lin-Kuei decided to convert their best warriors into cyborgs, Sektor and Cyrax had already been converted. Smoke and Sub-Zero attempt to espace, but Smoke was captured and coverted to cyborg LK-7T2.</string>
 
-    <string name="question_7">7. Thank you for using this videogame quiz app. We hope that you have fun at the same time you learn more things about the history of videogames. This app is a beta and we would like to know what videogame, platform, company, franchise or character do you like to see in the questions.</string>
+    <string name="question_7">7. In what genre of electronic game do you control the actions of one or more characters immersed in a world defined by a narrative, where the progress of the characters is a determining factor for success? This genre may have real-time or turn-based battles, and is based on a non-electronic traditional version using pencil, paper, dice, and character interpretation.</string>
+    <string name="q7_answer">The answer is RPG or Role-playing Game.</string>
+
+    <string name="question_8">8. Thank you for using this videogame quiz app. We hope that you have fun at the same time you learn more things about the history of videogames. This app is a beta and we would like to know what videogame, platform, company, franchise or character do you like to see in the questions.</string>
 
     <string name="submitButton">Submit</string>
 

@@ -24,7 +24,7 @@ import butterknife.OnClick;
 public class MainActivity extends AppCompatActivity {
 
     // maximum score of the quiz
-    private final double TOTAL_SCORE = 6.0;
+    private final double TOTAL_SCORE = 7.0;
 
     /**
      *  variable used for validation
@@ -68,7 +68,7 @@ public class MainActivity extends AppCompatActivity {
     /**
      * Binds the text views for the feedbacks of the questions.
      */
-    @BindViews({R.id.q1_answer, R.id.q2_answer, R.id.q3_answer, R.id.q4_answer, R.id.q5_answer, R.id.q6_answer}) TextView[] answers;
+    @BindViews({R.id.q1_answer, R.id.q2_answer, R.id.q3_answer, R.id.q4_answer, R.id.q5_answer, R.id.q6_answer, R.id.q7_feedback}) TextView[] answers;
 
     /**
      *  Binds every radioButton of the form
@@ -78,9 +78,10 @@ public class MainActivity extends AppCompatActivity {
     @BindViews({R.id.q5_alt_a, R.id.q5_alt_b, R.id.q5_alt_c, R.id.q5_alt_d}) RadioButton[] radioButtons5;
 
     /**
-     * Binds the optional question 7 and the submit button
+     * Binds the optional question 7, 8 and the submit button
      */
     @BindView(R.id.q7_answer) EditText question7;
+    @BindView(R.id.q8_answer) EditText question8;
     @BindView(R.id.submitButton) Button submit;
 
     /**
@@ -110,16 +111,16 @@ public class MainActivity extends AppCompatActivity {
                 public void onCheckedChanged(CompoundButton aCheckBox, boolean checked) {
                     switch(aCheckBox.getId()){
                         case R.id.q2_alt_a:
-                            if(aCheckBox.isChecked()) question2[0] = true; else question2[0] = false;
+                            question2[0] = aCheckBox.isChecked();
                             break;
                         case R.id.q2_alt_b:
-                            if(aCheckBox.isChecked()) question2[1] = true; else question2[1] = false;
+                            question2[1] = aCheckBox.isChecked();
                             break;
                         case R.id.q2_alt_c:
-                            if(aCheckBox.isChecked()) question2[2] = true; else question2[2] = false;
+                            question2[2] = aCheckBox.isChecked();
                             break;
                         case R.id.q2_alt_d:
-                            if(aCheckBox.isChecked()) question2[3] = true; else question2[3] = false;
+                            question2[3] = aCheckBox.isChecked();
                             break;
                     }
                 }
@@ -138,16 +139,16 @@ public class MainActivity extends AppCompatActivity {
                 public void onCheckedChanged(CompoundButton aCheckBox, boolean checked) {
                     switch(aCheckBox.getId()){
                         case R.id.q3_alt_a:
-                            if(aCheckBox.isChecked()) question3[0] = true; else question3[0] = false;
+                            question3[0] = aCheckBox.isChecked();
                             break;
                         case R.id.q3_alt_b:
-                            if(aCheckBox.isChecked()) question3[1] = true; else question3[1] = false;
+                            question3[1] = aCheckBox.isChecked();
                             break;
                         case R.id.q3_alt_c:
-                            if(aCheckBox.isChecked()) question3[2] = true; else question3[2] = false;
+                            question3[2] = aCheckBox.isChecked();
                             break;
                         case R.id.q3_alt_d:
-                            if(aCheckBox.isChecked()) question3[3] = true; else question3[3] = false;
+                            question3[3] = aCheckBox.isChecked();
                             break;
                     }
                 }
@@ -198,16 +199,16 @@ public class MainActivity extends AppCompatActivity {
                 public void onCheckedChanged(CompoundButton aCheckBox, boolean checked) {
                     switch(aCheckBox.getId()){
                         case R.id.q6_alt_a:
-                            if(aCheckBox.isChecked()) question6[0] = true; else question6[0] = false;
+                            question6[0] = aCheckBox.isChecked();
                             break;
                         case R.id.q6_alt_b:
-                            if(aCheckBox.isChecked()) question6[1] = true; else question6[1] = false;
+                            question6[1] = aCheckBox.isChecked();
                             break;
                         case R.id.q6_alt_c:
-                            if(aCheckBox.isChecked()) question6[2] = true; else question6[2] = false;
+                            question6[2] = aCheckBox.isChecked();
                             break;
                         case R.id.q6_alt_d:
-                            if(aCheckBox.isChecked()) question6[3] = true; else question6[3] = false;
+                            question6[3] = aCheckBox.isChecked();
                             break;
                     }
                 }
@@ -236,7 +237,7 @@ public class MainActivity extends AppCompatActivity {
             seeCorrectAnswers.setText(R.string.viewAnswersMessage);
             gbLogo.setBackgroundResource(R.drawable.giantbomblogo);
             submit.setVisibility(View.INVISIBLE);
-            if(question7.length() != 0) sendEMail();
+            if(question8.length() != 0) sendEMail();
             Toast.makeText(this,
                     String.format(getString(R.string.finalScoreMessage).toString(), computeScore(), TOTAL_SCORE),
                     Toast.LENGTH_LONG)
@@ -277,6 +278,7 @@ public class MainActivity extends AppCompatActivity {
         for(CheckBox checkbox : checkBoxes6){
             checkbox.setEnabled(false);
         }
+        question7.setEnabled(false);
     }
 
     /**
@@ -290,7 +292,7 @@ public class MainActivity extends AppCompatActivity {
         sendTo[0] = "email@email.com";
         intent.putExtra(Intent.EXTRA_EMAIL, sendTo);
         intent.putExtra(Intent.EXTRA_SUBJECT, "Next Quiz");
-        intent.putExtra(Intent.EXTRA_TEXT, question7.getText());
+        intent.putExtra(Intent.EXTRA_TEXT, question8.getText());
         startActivity(Intent.createChooser(intent,"Send questions for next quiz"));
 
     }
@@ -299,6 +301,8 @@ public class MainActivity extends AppCompatActivity {
      *  Method to provide the feedback of the questions
      */
     private void provideFeedback(){
+        answers[6].setText(R.string.q7_answer);
+        answers[6].setBackgroundResource(R.color.colorPrimary);
         answers[5].setText(R.string.q6_answer);
         checkBoxes6[0].setBackgroundResource(R.color.colorPrimary);
         checkBoxes6[2].setBackgroundResource(R.color.colorPrimary);
@@ -327,7 +331,23 @@ public class MainActivity extends AppCompatActivity {
         score += computeCheckBoxScore(question2, ANSWER2);
         score += computeCheckBoxScore(question3, ANSWER3);
         score += computeCheckBoxScore(question6, ANSWER6);
+        score += computeTextQuestion();
         return score;
+    }
+
+    /**
+     * Calculates the score of the text question
+     * @return the score
+     */
+    private double computeTextQuestion(){
+        if(question7.length() != 0) {
+            final String RPG_PATTERN = "([Rr]ole[- ][Pp]laying [Gg]ame|RPG|rpg)";
+            if(question7.getText().toString().matches(RPG_PATTERN)){
+                return 1.0;
+            }
+        }
+        return 0.0;
+
     }
 
     /**
